@@ -16,8 +16,8 @@ Make it work
 
 - [x] we hebben een url nodig (endpoint): https://pokeapi.co/api/v2/pokemon/ditto
 - [x] libraries installen, (npm install, npm install axios)
-- [] importeren useState, useEffect, axios
-- [] Ga naar App.js
+- [x] Ga naar App.js
+- [x] importeren useState, useEffect, axios
 - [] Variabelen aanmaken (voor de use state hook)
 - [] useEffect in ons component zetten (gaat 1 keer iets doen)
 - [] Async function maken -> data fetchen, en we moeten hem aanroepen
