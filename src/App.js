@@ -28,8 +28,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>{pokemon && pokemon.name}</h1>
-      <img src={pokemon && pokemon.sprites.front_default} />
+      {/* Weergeven met JSX */}
+      {/* Goed oppassen, als we data niet hebben && of ?. gebruiken */}
+      <h1>{pokemon?.name}</h1>
+      <img src={pokemon?.sprites.front_default} />
     </div>
   );
 }
