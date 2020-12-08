@@ -19,7 +19,7 @@ Make it work
 - [x] Ga naar App.js
 - [x] importeren useState, useEffect, axios
 - [x] Variabelen aanmaken (voor de use state hook)
-- [] useEffect in ons component zetten (gaat 1 keer iets doen)
+- [x] useEffect in ons component zetten (gaat 1 keer iets doen)
 - [] Async function maken -> data fetchen, en we moeten hem aanroepen
 - [] De state updaten met de data uit de api
 - [] Data weergeven op de pagina, vanuit de state (JSX)

@@ -7,6 +7,10 @@ function App() {
   // [getter, setter]
   const [pokemon, setPokemon] = useState();
 
+  useEffect(() => {
+    console.log("HALLO! Ik zit in useEffect");
+  }, []);
+
   return <div className="App">Hello world</div>;
 }
 
