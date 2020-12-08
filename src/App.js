@@ -12,12 +12,17 @@ function App() {
 
     // definieren (opschrijven)
     async function getPokemonData() {
+      // data ophalen (of fetchen)
       const result = await axios.get("https://pokeapi.co/api/v2/pokemon/ditto");
-      console.log(result.data);
+
+      // setter gebruiken om de state te updaten
+      setPokemon(result.data);
     }
 
     getPokemonData(); // aanroepen
   }, []);
+
+  console.log("HIER ZIT DE DATA IN:", pokemon);
 
   return <div className="App">Hello world</div>;
 }
