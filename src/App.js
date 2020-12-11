@@ -18,7 +18,10 @@ function App() {
         setPokemons(response.data.results);
         // Werkt niet want het component moet nog gererendered worden :(
         // console.log("DIT WERKT OOK NIET:", pokemons);
-      } catch (error) {}
+      } catch (error) {
+        // betere feedback geven
+        alert("Oops, the pokemons got away");
+      }
     }
 
     getPokemons();

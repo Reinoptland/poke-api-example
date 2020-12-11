@@ -84,6 +84,15 @@ Ophalen van 20 pokemon namen ophalen uit api en weergeven,et kaartjes
 - [x] De state updaten met de data uit de api
 - [x] Data weergeven op de pagina, 1 kaartje aan maken voor elke pokemon naam
 
+## Als een gebruiker wil ik volgende en vorige knoppen hebben zodat ik door de pokemon heen kan bladeren
+
+### Stapen plan
+
+- [] State aan maken voor de huidige "pagina" beginwaarde: 0
+- [] url aanpassen, `offset${pagina * 20}`
+- [] Knopje maken die de pagina verandert met + 1 (volgende)
+- [] Knopje maken die de pagine verandert met -1 (vorige)
+
 ## Later nog te doen
 
 Make it better
