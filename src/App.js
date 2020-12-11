@@ -8,6 +8,10 @@ import "./App.css";
 function App() {
   const [pokemons, setPokemons] = useState(null);
 
+  useEffect(() => {
+    console.log("hallo! Ik ben een effect");
+  }, []);
+
   return (
     <div className="App">
       <PokemonCard name="pikachu" />

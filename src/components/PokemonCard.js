@@ -7,8 +7,8 @@ export default function PokemonCard(props) {
   // [getter, setter]
   const [pokemon, setPokemon] = useState();
 
-  console.log("HIER ZIT DE DATA IN:", pokemon);
-  console.log("Wat zijn de props?", props);
+  //   console.log("HIER ZIT DE DATA IN:", pokemon);
+  //   console.log("Wat zijn de props?", props);
 
   useEffect(() => {
     // console.log("HALLO! Ik zit in useEffect");
