@@ -80,7 +80,7 @@ Ophalen van 20 pokemon namen ophalen uit api en weergeven,et kaartjes
 - [x] importeren useState, useEffect, axios
 - [x] Variabelen aanmaken (voor de use state hook)
 - [x] useEffect in ons component zetten (gaat 1 keer iets doen)
-- [] Async function maken -> data fetchen, en we moeten hem aanroepen
+- [x] Async function maken -> data fetchen, en we moeten hem aanroepen
 - [] De state updaten met de data uit de api
 - [] Data weergeven op de pagina, 1 kaartje aan maken voor elke pokemon naam
 

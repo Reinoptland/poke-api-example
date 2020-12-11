@@ -9,6 +9,17 @@ function App() {
   const [pokemons, setPokemons] = useState(null);
 
   useEffect(() => {
+    async function getPokemons() {
+      try {
+        const response = await axios.get(
+          `https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20`
+        );
+        console.log("DIT KREGEN WE TERUG:", response.data.results);
+      } catch (error) {}
+    }
+
+    getPokemons();
+
     console.log("hallo! Ik ben een effect");
   }, []);
 
