@@ -42,7 +42,7 @@ function App() {
       {pokemons &&
         pokemons.map((pokemon) => {
           // console.log("1 pokemon?", pokemon.name);
-          return <PokemonCard name={pokemon.name} />;
+          return <PokemonCard key={pokemon.name} name={pokemon.name} />;
         })}
     </div>
   );
