@@ -67,7 +67,7 @@ Strategie: dynamisch maken van de data de we ophalen
 ### Stappenplan
 
 - [x] Component maken PokemonKaartje (om de code te hergebruiken)
-- [] Prop doorgeven aan elke PokemonKaartje met de naam van de pokemon
+- [x] Prop doorgeven aan elke PokemonKaartje met de naam van de pokemon
 - [] Request naar de api aanpassen zodat er een andere pokemon kan worden opgehaald
 
 ## Later nog te doen

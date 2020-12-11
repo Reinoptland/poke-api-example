@@ -29,7 +29,9 @@ function App() {
 
   return (
     <div className="App">
-      <PokemonCard />
+      <PokemonCard name="pikachu" />
+      <PokemonCard name="ditto" />
+      <PokemonCard name="geodude" />
       {/* Weergeven met JSX */}
       {/* Goed oppassen, als we data niet hebben && of ?. gebruiken */}
       <h1>{pokemon?.name}</h1>
