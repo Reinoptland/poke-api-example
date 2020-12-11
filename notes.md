@@ -24,6 +24,54 @@ Make it work
 - [x] De state updaten met de data uit de api
 - [] Data weergeven op de pagina, vanuit de state (JSX)
 
+## Sessie 2
+
+1. Waarom is het zo handig om je app op te delen in componenten?
+
+- Hergebruiken van code!
+- Veranderingen kun je op een plek maken
+- Overzichtelijk voor je collega, makkelijk te vinden waar je aanpassingen moet doen
+
+2. Hoe kan je in React informatie doorgeven van het ene component naar het andere component?
+
+- Je kan informatie doorgeven aan een "kind" door middel van props
+
+Props doorgeven
+
+Naam van de prop: name
+Waarde van de prop: pokemonName ("bulbasaur")
+
+```javascript
+function App(){
+    const pokemonName = "bulbasaur"
+    return <div>
+        <PokemonCard name={pokemonName}>
+    </div>
+}
+```
+
+- Later can je ook `context` gebruiken (gaan jullie volgende week leren)
+
+3. Wat is "map" en waarom zou je dat willen gebruiken?
+
+- Stel dat je een array hebt
+- Je wil elk element van dat array omzetten in een React component
+- Dan kan je daar .map() voor gebruiken
+
+## Als een gebruiker wil ik een lijst zien met 20 pokemon zodat ik mijn favoriete pokemon kan kiezen
+
+Extra doel: zo min mogelijk de code herhalen
+
+Strategie: dynamisch maken van de data de we ophalen
+
+### Stappenplan
+
+- [x] Component maken PokemonKaartje (om de code te hergebruiken)
+- [] Prop doorgeven aan elke PokemonKaartje met de naam van de pokemon
+- [] Request naar de api aanpassen zodat er een andere pokemon kan worden opgehaald
+
+## Later nog te doen
+
 Make it better
 
 - [] try / catch

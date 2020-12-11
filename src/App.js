@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import PokemonCard from "./components/PokemonCard";
 
 import "./App.css";
 
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <div className="App">
+      <PokemonCard />
       {/* Weergeven met JSX */}
       {/* Goed oppassen, als we data niet hebben && of ?. gebruiken */}
       <h1>{pokemon?.name}</h1>
