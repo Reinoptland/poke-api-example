@@ -98,13 +98,27 @@ QueryString: offset=0&limit=20
 - limit: geef me twintig stukken data
 
 - [x] State aan maken voor de huidige "pagina" beginwaarde: 0
-- [x] url aanpassen (template literal), `offset${pagina * 20}`
+- [x] url aanpassen (template literal), `offset${pagina}`
 - [x] Pagina state aan dependency array van useEffect toegevoegd
 - [x] Knopje maken die de pagina verandert met + 20 (volgende)
   - [x] Knopje (<button></button>)
   - [x] onClick (Event listener)
-  - [x] state updaten met + 20
+  - [x] state updaten met + 20 -> setPagina(pagina + 20)
 - [x] Knopje maken die de pagine verandert met -20 (vorige)
+
+## Stappen plan: Loading feedback
+
+- [x] Wanneer is de data nog niet aanwezig? als pokemons === null
+- [x] If statement toevoegen: if(pokemons === null){ return <img /> }
+
+## Stappen plan Error feedback
+
+- [x] State aanmaken voor status van de app
+- [x] De beginwaarde van die status is: 'loading'
+- [x] Is data aanwezig dan is de status: 'done loading'
+- [x] Was er een error dan is status: 'error'
+- [x] Status aanpassen op de juiste plek in de app
+- [x] De gebruiker laten zien wat er is gebeurd
 
 ## Later nog te doen
 
@@ -112,9 +126,9 @@ Vragenlijst
 
 - [x] Stappen plan van vorige keer afwerken
 - [x] Volgende / Vorige button
-- [] Vorige knop mag je niet kunnen gebruiken als je op pagina 0 bent
+- [x] Vorige knop mag je niet kunnen gebruiken als je op pagina 0 bent
 
-- [] Loading / Error feedback (try / catch)
+- [x] Loading / Error feedback (try / catch)
 - [] Wat moet je doen met "keys" als je Array.map gebruikt?
 - [] PokemonCard uitbreiden met moves, abilities enzovoorts
 
