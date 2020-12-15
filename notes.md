@@ -86,18 +86,33 @@ Ophalen van 20 pokemon namen ophalen uit api en weergeven,et kaartjes
 
 ## Als een gebruiker wil ik volgende en vorige knoppen hebben zodat ik door de pokemon heen kan bladeren
 
-### Stapen plan
+### Stappen plan
 
-- [] State aan maken voor de huidige "pagina" beginwaarde: 0
-- [] url aanpassen, `offset${pagina * 20}`
+Url: `https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20`
+
+Domein: https://pokeapi.co
+Api Endpoint: /api/v2/pokemon
+QueryString: offset=0&limit=20
+
+- offset: ik wil beginnen bij de eerste pokemon
+- limit: geef me twintig stukken data
+
+- [x] State aan maken voor de huidige "pagina" beginwaarde: 0
+- [] url aanpassen (template literal), `offset${pagina * 20}`
 - [] Knopje maken die de pagina verandert met + 1 (volgende)
 - [] Knopje maken die de pagine verandert met -1 (vorige)
 
 ## Later nog te doen
 
+Vragenlijst
+
+- [] Stappen plan van vorige keer afwerken
+- [] Volgende / Vorige button
+- [] Loading / Error feedback (try / catch)
+- [] Wat moet je doen met "keys" als je Array.map gebruikt?
+- [] PokemonCard uitbreiden met moves, abilities enzovoorts
+
 Make it better
 
-- [] try / catch
 - [] mappenstructuur
-- [] Styling
-- [] Maak het mogelijk om een andere pokemon van de api op te halen niet alleen ditto
+- [] Styling -> Per component / importeren?
