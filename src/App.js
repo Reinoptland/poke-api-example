@@ -46,7 +46,7 @@ function App() {
   // Beter (maar kunnen wij niets aan doen)
   // Request 1: [{ id, plaatje, }]
   if (status === "loading") {
-    return <img src={spinner} height="400px" />;
+    return <img src={spinner} height="400px" alt="loading" />;
   } else if (status === "error") {
     return <h1>O jee de pokemons zijn ontsnapt, druk up refresh</h1>;
   } else {
