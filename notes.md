@@ -104,7 +104,7 @@ QueryString: offset=0&limit=20
   - [x] Knopje (<button></button>)
   - [x] onClick (Event listener)
   - [x] state updaten met + 20
-- [] Knopje maken die de pagine verandert met -1 (vorige)
+- [x] Knopje maken die de pagine verandert met -20 (vorige)
 
 ## Later nog te doen
 
@@ -118,5 +118,6 @@ Vragenlijst
 
 Make it better
 
+- [] Vorige knop mag je niet kunnen gebruiken als je op pagina 0 bent
 - [] mappenstructuur
 - [] Styling -> Per component / importeren?

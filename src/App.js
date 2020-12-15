@@ -33,8 +33,15 @@ function App() {
     getPokemons();
   }, [pagina]);
 
+  // Request 1: [{ name: 'pickachu', url: 'https://'}]
+  // Request 2: { name, plaatje, etc }
+
+  // Beter (maar kunnen wij niets aan doen)
+  // Request 1: [{ id, plaatje, }]
+
   return (
     <div className="App">
+      <button onClick={() => setPagina(pagina - 20)}>Vorige</button>
       <button onClick={() => setPagina(pagina + 20)}>Volgende</button>
       {pokemons &&
         // array met pokemon namen omzetten in PokemonKaartjes
