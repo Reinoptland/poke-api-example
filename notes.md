@@ -129,8 +129,8 @@ Vragenlijst
 - [x] Vorige knop mag je niet kunnen gebruiken als je op pagina 0 bent
 
 - [x] Loading / Error feedback (try / catch)
-- [] Wat moet je doen met "keys" als je Array.map gebruikt?
-- [] PokemonCard uitbreiden met moves, abilities enzovoorts
+- [x] Wat moet je doen met "keys" als je Array.map gebruikt?
+- [x] PokemonCard uitbreiden met moves, abilities enzovoorts
 
 Make it better
 
