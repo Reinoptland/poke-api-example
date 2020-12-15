@@ -98,8 +98,12 @@ QueryString: offset=0&limit=20
 - limit: geef me twintig stukken data
 
 - [x] State aan maken voor de huidige "pagina" beginwaarde: 0
-- [] url aanpassen (template literal), `offset${pagina * 20}`
-- [] Knopje maken die de pagina verandert met + 1 (volgende)
+- [x] url aanpassen (template literal), `offset${pagina * 20}`
+- [x] Pagina state aan dependency array van useEffect toegevoegd
+- [] Knopje maken die de pagina verandert met + 20 (volgende)
+  - [] Knopje (<button></button>)
+  - [] onClick (Event listener)
+  - [] state updaten met + 20
 - [] Knopje maken die de pagine verandert met -1 (vorige)
 
 ## Later nog te doen

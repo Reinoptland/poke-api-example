@@ -19,7 +19,7 @@ function App() {
       try {
         // data fetchen uit de api, een array met pokemon (namen)
         const response = await axios.get(
-          `https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20`
+          `https://pokeapi.co/api/v2/pokemon/?offset=${pagina}&limit=20`
         );
 
         // de state updaten met de response uit de api
@@ -31,7 +31,7 @@ function App() {
 
     // aanroepen
     getPokemons();
-  }, []);
+  }, [pagina]);
 
   return (
     <div className="App">
