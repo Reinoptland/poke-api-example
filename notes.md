@@ -110,14 +110,15 @@ QueryString: offset=0&limit=20
 
 Vragenlijst
 
-- [] Stappen plan van vorige keer afwerken
-- [] Volgende / Vorige button
+- [x] Stappen plan van vorige keer afwerken
+- [x] Volgende / Vorige button
+- [] Vorige knop mag je niet kunnen gebruiken als je op pagina 0 bent
+
 - [] Loading / Error feedback (try / catch)
 - [] Wat moet je doen met "keys" als je Array.map gebruikt?
 - [] PokemonCard uitbreiden met moves, abilities enzovoorts
 
 Make it better
 
-- [] Vorige knop mag je niet kunnen gebruiken als je op pagina 0 bent
 - [] mappenstructuur
 - [] Styling -> Per component / importeren?

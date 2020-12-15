@@ -39,10 +39,16 @@ function App() {
   // Beter (maar kunnen wij niets aan doen)
   // Request 1: [{ id, plaatje, }]
 
+  console.log(pokemons);
   return (
     <div className="App">
-      <button onClick={() => setPagina(pagina - 20)}>Vorige</button>
-      <button onClick={() => setPagina(pagina + 20)}>Volgende</button>
+      <button disabled={pagina === 0} onClick={() => setPagina(pagina - 20)}>
+        Vorige
+      </button>
+      <button disabled={pagina === 1100} onClick={() => setPagina(pagina + 20)}>
+        Volgende
+      </button>
+
       {pokemons &&
         // array met pokemon namen omzetten in PokemonKaartjes
         // we geven de naam door als een "prop"
