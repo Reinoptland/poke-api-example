@@ -35,6 +35,7 @@ function App() {
 
   return (
     <div className="App">
+      <button onClick={() => setPagina(pagina + 20)}>Volgende</button>
       {pokemons &&
         // array met pokemon namen omzetten in PokemonKaartjes
         // we geven de naam door als een "prop"
