@@ -1,7 +1,7 @@
 import { useState } from "react";
-import HomePage from "./components/HomePage";
-import NavBar from "./components/NavBar";
-import MyPokemons from "./components/MyPokemons";
+import HomePage from "./components/Organisms/HomePage";
+import NavBar from "./components/Molecules/NavBar";
+import MyPokemons from "./components/Organisms/MyPokemons";
 import { Switch, Route, Link } from "react-router-dom";
 
 function App() {

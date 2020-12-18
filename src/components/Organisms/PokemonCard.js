@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import PokemonTypes from "./PokemonTypes";
+import PokemonTypes from "../Molecules/PokemonTypes";
 
 import "./PokemonCard.css";
 

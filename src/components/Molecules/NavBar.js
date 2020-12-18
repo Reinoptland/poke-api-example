@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { LoggedInContext } from "../contexts/LoggedInContext";
+import { LoggedInContext } from "../../contexts/LoggedInContext";
 
 export default function NavBar() {
   const loggedInData = useContext(LoggedInContext);

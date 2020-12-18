@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { LoggedInContext } from "../contexts/LoggedInContext";
+import { LoggedInContext } from "../../contexts/LoggedInContext";
 import { useHistory } from "react-router-dom";
 import PokemonCard from "./PokemonCard";
 

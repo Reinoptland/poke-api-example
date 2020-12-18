@@ -1,11 +1,11 @@
 import { useState, useEffect, useContext } from "react";
-import { LoggedInContext } from "../contexts/LoggedInContext";
+import { LoggedInContext } from "../../contexts/LoggedInContext";
 import axios from "axios";
 
 import PokemonCard from "./PokemonCard";
 
 import "./App.css";
-import spinner from "../pokeball.gif";
+import spinner from "../../pokeball.gif";
 
 export default function HomePage(props) {
   const loggedInData = useContext(LoggedInContext);
