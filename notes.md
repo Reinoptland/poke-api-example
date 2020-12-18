@@ -141,6 +141,14 @@ Vragenlijst
 
 ## Ik wil mijn eigen pokemon verzameling zien (ingelogd zijn)
 
+- [x] Pagina maken voor my pokemons
+- [x] 2 pokemon laten zien op die pagina (door PokemonCard her te gebruiken)
+- [ ] state aanmaken om bij te houden of iemand is ingelogd, true / false
+- [ ] Wanneer je niet ingelogd en je gaat toch naar /mypokemons wordt je terug gestuurd naar HomePage
+  - [ ] useHistory()
+  - [ ] history.push("/")
+- [ ] Knopje om in te loggen (formulier)
+
 ## Omschrijven useContext
 
 ## App een beetje organiseren (atoms, molecules, organisms)

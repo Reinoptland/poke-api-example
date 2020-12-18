@@ -1,4 +1,5 @@
 import HomePage from "./components/HomePage";
+import MyPokemons from "./components/MyPokemons";
 import { Switch, Route, Link } from "react-router-dom";
 
 function App() {
@@ -6,9 +7,12 @@ function App() {
     <>
       <nav>
         <Link to="/">Home</Link>
-        <Link to="/mypokemon">My Pokemon</Link>
+        <Link to="/mypokemons">My Pokemon</Link>
       </nav>
       <Switch>
+        <Route path="/mypokemons">
+          <MyPokemons />
+        </Route>
         <Route exact path="/">
           <HomePage />
         </Route>
