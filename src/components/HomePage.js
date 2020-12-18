@@ -11,7 +11,7 @@ export default function HomePage() {
   const [status, setStatus] = useState("loading");
   const [pagina, setPagina] = useState(0);
 
-  console.log("pokemons", pokemons);
+  //   console.log("pokemons", pokemons);
 
   useEffect(() => {
     async function getPokemons() {

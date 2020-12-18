@@ -35,7 +35,7 @@ export default function PokemonCard(props) {
         alt={pokemon?.name}
       />
       {pokemon && <PokemonTypes pokemon={pokemon} />}
-      <div class="stats">
+      <div className="stats">
         {pokemon &&
           pokemon.stats.map((stat) => {
             // console.log("WAT IS STAT", stat);

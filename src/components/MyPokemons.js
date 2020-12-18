@@ -1,11 +1,12 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import PokemonCard from "./PokemonCard";
 
 export default function MyPokemons(props) {
-  console.log("PROPS IN MYPOKEMONS PAGE:", props);
+  const history = useHistory();
 
   if (props.loggedIn === false) {
-    return "GO BACK TO HOME PAGE PLEASE";
+    history.push("/");
   }
 
   return (
