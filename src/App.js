@@ -21,7 +21,7 @@ function App() {
         </Route>
         <Route exact path="/">
           {/* inloggen */}
-          <HomePage />
+          <HomePage setLoggedIn={setLoggedIn} />
         </Route>
         <Route path="/">404 Page Not found, sorry!</Route>
       </Switch>

@@ -145,10 +145,12 @@ Vragenlijst
 - [x] 2 pokemon laten zien op die pagina (door PokemonCard her te gebruiken)
 - [x] state aanmaken om bij te houden of iemand is ingelogd, true / false
 - [x] Info of iemand is ingelogd doorgegeven aan MyPokemonPage as een prop
-- [ ] Wanneer je niet ingelogd en je gaat toch naar /mypokemons wordt je terug gestuurd naar HomePage
-  - [ ] useHistory()
-  - [ ] history.push("/")
-- [ ] Knopje om in te loggen (formulier)
+- [x] Wanneer je niet ingelogd en je gaat toch naar /mypokemons wordt je terug gestuurd naar HomePage
+  - [x] useHistory()
+  - [x] history.push("/")
+- [x] Knopje om in te loggen (formulier)
+  - [x] SetloggedIn doorgeven als een prop
+  - [x] onClick setLoggedIn(true)
 
 ## Omschrijven useContext
 
