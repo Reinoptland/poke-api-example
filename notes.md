@@ -136,7 +136,7 @@ Vragenlijst
 
 - [x] Om de hele app moet een Router heen komen
 - [x] Inhoud van App.js verplaatsen naar HomePage
-- [ ] Switch, Routes nodig voor de verschillende paginas
+- [x] Switch, Routes nodig voor de verschillende paginas
 - [ ] Links nodig om te navigeren
 
 ## Ik wil mijn eigen pokemon verzameling zien (ingelogd zijn)
