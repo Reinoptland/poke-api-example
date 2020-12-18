@@ -134,7 +134,7 @@ Vragenlijst
 
 ## Als een gebruiker wil ik verschillende paginas kunnen bekijken
 
-- [ ] Om de hele app moet een Router heen komen
+- [x] Om de hele app moet een Router heen komen
 - [ ] Switch, Routes nodig voor de verschillende paginas
 - [ ] Links nodig om te navigeren
 
