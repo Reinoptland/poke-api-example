@@ -52,22 +52,28 @@ function App() {
   } else {
     return (
       <div className="App">
-        <button disabled={pagina === 0} onClick={() => setPagina(pagina - 20)}>
-          Vorige
-        </button>
-        <button
-          disabled={pagina === 1100}
-          onClick={() => setPagina(pagina + 20)}
-        >
-          Volgende
-        </button>
-
-        {pokemons &&
-          // array met pokemon namen omzetten in PokemonKaartjes
-          // we geven de naam door als een "prop"
-          pokemons.map((pokemon) => {
-            return <PokemonCard key={pokemon.name} name={pokemon.name} />;
-          })}
+        <div className="next-previous">
+          <button
+            disabled={pagina === 0}
+            onClick={() => setPagina(pagina - 20)}
+          >
+            Vorige
+          </button>
+          <button
+            disabled={pagina === 1100}
+            onClick={() => setPagina(pagina + 20)}
+          >
+            Volgende
+          </button>
+        </div>
+        <div className="pokemons">
+          {pokemons &&
+            // array met pokemon namen omzetten in PokemonKaartjes
+            // we geven de naam door als een "prop"
+            pokemons.map((pokemon) => {
+              return <PokemonCard key={pokemon.name} name={pokemon.name} />;
+            })}
+        </div>
       </div>
     );
   }

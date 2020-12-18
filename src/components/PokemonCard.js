@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import PokemonTypes from "./PokemonTypes";
 
+import "./PokemonCard.css";
+
 export default function PokemonCard(props) {
   // we maken een state aan (voor details van elke pokemon)
   const [pokemon, setPokemon] = useState(null);
@@ -25,21 +27,26 @@ export default function PokemonCard(props) {
   // Informatie weergeven
   // console.log("WELKE DATA HEBBEN WE NOG MEER?", pokemon && pokemon);
   return (
-    <div>
-      <h1>Pokemon Card</h1>
+    <div className="card">
       <h1>{pokemon && pokemon.name}</h1>
-      <img src={pokemon?.sprites.front_default} alt={pokemon?.name} />
+      <img
+        className="sprite"
+        src={pokemon?.sprites.front_default}
+        alt={pokemon?.name}
+      />
       {pokemon && <PokemonTypes pokemon={pokemon} />}
-      {pokemon &&
-        pokemon.stats.map((stat) => {
-          // console.log("WAT IS STAT", stat);
-          return (
-            <div key={pokemon.name + stat.stat.name}>
-              {stat.stat.name}
-              <progress value={stat.base_stat} max={100} />
-            </div>
-          );
-        })}
+      <div class="stats">
+        {pokemon &&
+          pokemon.stats.map((stat) => {
+            // console.log("WAT IS STAT", stat);
+            return (
+              <div key={pokemon.name + stat.stat.name} className="stat">
+                {stat.stat.name}
+                <progress value={stat.base_stat} max={100} />
+              </div>
+            );
+          })}
+      </div>
     </div>
   );
 }

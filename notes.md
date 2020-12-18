@@ -132,6 +132,20 @@ Vragenlijst
 - [x] Wat moet je doen met "keys" als je Array.map gebruikt?
 - [x] PokemonCard uitbreiden met moves, abilities enzovoorts
 
+## Als een gebruiker wil ik verschillende paginas kunnen bekijken
+
+- [ ] Om de hele app moet een Router heen komen
+- [ ] Switch, Routes nodig voor de verschillende paginas
+- [ ] Links nodig om te navigeren
+
+## Ik wil mijn eigen pokemon verzameling zien (ingelogd zijn)
+
+## Omschrijven useContext
+
+## App een beetje organiseren (atoms, molecules, organisms)
+
+## Github
+
 Make it better
 
 - [] mappenstructuur
