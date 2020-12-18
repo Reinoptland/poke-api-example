@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { LoggedInContext } from "../contexts/LoggedInContext";
 import axios from "axios";
 
 import PokemonCard from "./PokemonCard";
@@ -7,6 +8,7 @@ import "./App.css";
 import spinner from "../pokeball.gif";
 
 export default function HomePage(props) {
+  const loggedInData = useContext(LoggedInContext);
   const [pokemons, setPokemons] = useState(null);
   const [status, setStatus] = useState("loading");
   const [pagina, setPagina] = useState(0);
@@ -37,7 +39,9 @@ export default function HomePage(props) {
     return (
       <div className="App">
         <div>
-          <button onClick={() => props.setLoggedIn(true)}>Inloggen</button>
+          <button onClick={() => loggedInData.setLoggedIn(true)}>
+            Inloggen
+          </button>
         </div>
         <div className="next-previous">
           <button

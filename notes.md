@@ -158,10 +158,10 @@ Vragenlijst
 - [x] Exporteer de context (want we gaan hem nodig hebben in een ander component)
 - [x] Context beschikbaar maken aan de hele App (context provider)
 - [x] Waardes die we bij willen houden (zoals loggedIn) moeten we meegeven aan de Provider
-- [ ] Voor elk component die gebruik wil maken van de context
-  - [ ] Context importeren
-  - [ ] Informatie uit de context halen met useContext
-  - [ ] Waardes uit de context in het component gebruiken
+- [x] Voor elk component die gebruik wil maken van de context
+  - [x] Context importeren
+  - [x] Informatie uit de context halen met useContext
+  - [x] Waardes uit de context in het component gebruiken
 
 ## App een beetje organiseren (atoms, molecules, organisms)
 

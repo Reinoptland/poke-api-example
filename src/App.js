@@ -17,11 +17,11 @@ function App() {
       <Switch>
         <Route path="/mypokemons">
           {/* ben je ingelogd */}
-          <MyPokemons loggedIn={loggedIn} />
+          <MyPokemons />
         </Route>
         <Route exact path="/">
           {/* inloggen */}
-          <HomePage setLoggedIn={setLoggedIn} />
+          <HomePage />
         </Route>
         <Route path="/">404 Page Not found, sorry!</Route>
       </Switch>
