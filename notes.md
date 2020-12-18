@@ -154,6 +154,15 @@ Vragenlijst
 
 ## Omschrijven useContext
 
+- [x] Create a context
+- [x] Exporteer de context (want we gaan hem nodig hebben in een ander component)
+- [ ] Context beschikbaar maken aan de hele App (context provider)
+- [ ] Waardes die we bij willen houden (zoals loggedIn) moeten we meegeven aan de Provider
+- [ ] Voor elk component die gebruik wil maken van de context
+  - [ ] Context importeren
+  - [ ] Informatie uit de context halen met useContext
+  - [ ] Waardes uit de context in het component gebruiken
+
 ## App een beetje organiseren (atoms, molecules, organisms)
 
 ## Github
