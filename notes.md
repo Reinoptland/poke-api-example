@@ -132,6 +132,41 @@ Vragenlijst
 - [x] Wat moet je doen met "keys" als je Array.map gebruikt?
 - [x] PokemonCard uitbreiden met moves, abilities enzovoorts
 
+## Als een gebruiker wil ik verschillende paginas kunnen bekijken
+
+- [x] Om de hele app moet een Router heen komen
+- [x] Inhoud van App.js verplaatsen naar HomePage
+- [x] Switch, Routes nodig voor de verschillende paginas
+- [x] Links nodig om te navigeren
+
+## Ik wil mijn eigen pokemon verzameling zien (ingelogd zijn)
+
+- [x] Pagina maken voor my pokemons
+- [x] 2 pokemon laten zien op die pagina (door PokemonCard her te gebruiken)
+- [x] state aanmaken om bij te houden of iemand is ingelogd, true / false
+- [x] Info of iemand is ingelogd doorgegeven aan MyPokemonPage as een prop
+- [x] Wanneer je niet ingelogd en je gaat toch naar /mypokemons wordt je terug gestuurd naar HomePage
+  - [x] useHistory()
+  - [x] history.push("/")
+- [x] Knopje om in te loggen (formulier)
+  - [x] SetloggedIn doorgeven als een prop
+  - [x] onClick setLoggedIn(true)
+
+## Omschrijven useContext
+
+- [x] Create a context
+- [x] Exporteer de context (want we gaan hem nodig hebben in een ander component)
+- [x] Context beschikbaar maken aan de hele App (context provider)
+- [x] Waardes die we bij willen houden (zoals loggedIn) moeten we meegeven aan de Provider
+- [x] Voor elk component die gebruik wil maken van de context
+  - [x] Context importeren
+  - [x] Informatie uit de context halen met useContext
+  - [x] Waardes uit de context in het component gebruiken
+
+## App een beetje organiseren (atoms, molecules, organisms)
+
+## Github
+
 Make it better
 
 - [] mappenstructuur
