@@ -7,3 +7,9 @@
 - [x] Push je branch met veranderingen naar github: `git push mine feature-i-am-done`
 - [x] Master branch terugdraaien naar het begin
   - [x] git checkout master (of main)
+  - [x] git log
+  - [x] zoek de laatste commit van Nova en kopieer de "hash"
+    - Zoiets: a80c162fd5f91bba509d4c2bf0df6b4fe0645369
+  - [x] git reset --hard a80c162fd5f91bba509d4c2bf0df6b4fe0645369
+  - [x] git push --force mine master (of main)
+  - [x] maak een pullrequest op github
