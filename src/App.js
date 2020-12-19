@@ -4,51 +4,73 @@ import axios from "axios";
 import PokemonCard from "./components/PokemonCard";
 
 import "./App.css";
+import spinner from "./pokeball.gif";
 
 function App() {
+  // maken een state aan
   const [pokemons, setPokemons] = useState(null);
+  const [status, setStatus] = useState("loading");
+  const [pagina, setPagina] = useState(0);
 
+  // scenarios:
+  // loading -> balletje
+  // data is aanwezig -> pokemons laten zien
+  // error -> Foutmelding, wat moet de gebruiker doen?
+
+  console.log("pokemons", pokemons);
+
+  // use effect
   useEffect(() => {
+    // async functie definieren
     async function getPokemons() {
       try {
+        // data fetchen uit de api, een array met pokemon (namen)
         const response = await axios.get(
-          `https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20`
+          `https://pokeapi.co/api/v2/pokemon?limit=20&offset=${pagina}`
         );
-        // console.log("DIT KREGEN WE TERUG:", response.data.results);
+        // de state updaten met de response uit de api
         setPokemons(response.data.results);
-        // Werkt niet want het component moet nog gererendered worden :(
-        // console.log("DIT WERKT OOK NIET:", pokemons);
+        setStatus("done loading");
       } catch (error) {
-        // betere feedback geven
-        alert("Oops, the pokemons got away");
+        setStatus("error");
       }
     }
 
+    // aanroepen
     getPokemons();
-    // Werkt niet want getPokemons is een async function :(
-    // console.log("DIT WERKT NIET:", pokemons);
-    // console.log("hallo! Ik ben een effect");
-  }, []);
+  }, [pagina]);
 
-  // Vuistregel:
-  // Controleren wat de state op dit moment is
-  // altijd boven je return statement
+  // Request 1: [{ name: 'pickachu', url: 'https://'}]
+  // Request 2: { name, plaatje, etc }
 
-  // console.log("WAT IS NU DE STATE", pokemons); // 2x uitgevoerd
+  // Beter (maar kunnen wij niets aan doen)
+  // Request 1: [{ id, plaatje, }]
+  if (status === "loading") {
+    return <img src={spinner} height="400px" alt="loading" />;
+  } else if (status === "error") {
+    return <h1>O jee de pokemons zijn ontsnapt, druk up refresh</h1>;
+  } else {
+    return (
+      <div className="App">
+        <button disabled={pagina === 0} onClick={() => setPagina(pagina - 20)}>
+          Vorige
+        </button>
+        <button
+          disabled={pagina === 1100}
+          onClick={() => setPagina(pagina + 20)}
+        >
+          Volgende
+        </button>
 
-  // [pokemon, pokemon] =>
-  // [<PokemonCard name="pikachu" />, <PokemonCard name="bulbasaur" />]
-  // goeie usecase voor map
-
-  return (
-    <div className="App">
-      {pokemons &&
-        pokemons.map((pokemon) => {
-          // console.log("1 pokemon?", pokemon.name);
-          return <PokemonCard key={pokemon.name} name={pokemon.name} />;
-        })}
-    </div>
-  );
+        {pokemons &&
+          // array met pokemon namen omzetten in PokemonKaartjes
+          // we geven de naam door als een "prop"
+          pokemons.map((pokemon) => {
+            return <PokemonCard key={pokemon.name} name={pokemon.name} />;
+          })}
+      </div>
+    );
+  }
 }
 
 export default App;

@@ -1,39 +1,45 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-// useState, axios
+import PokemonTypes from "./PokemonTypes";
 
 export default function PokemonCard(props) {
-  // [getter, setter]
-  const [pokemon, setPokemon] = useState();
+  // we maken een state aan (voor details van elke pokemon)
+  const [pokemon, setPokemon] = useState(null);
 
-  //   console.log("HIER ZIT DE DATA IN:", pokemon);
-  //   console.log("Wat zijn de props?", props);
-
+  // useEffect
   useEffect(() => {
-    // console.log("HALLO! Ik zit in useEffect");
-
-    // definieren (opschrijven)
     async function getPokemonData() {
-      // data ophalen (of fetchen)
+      // data fetchen uit de api
       const result = await axios.get(
+        // we gebruiken de naam prop om de juiste data op te halen
         `https://pokeapi.co/api/v2/pokemon/${props.name}`
       );
-
-      // setter gebruiken om de state te updaten
+      // respons opslaan in de state
       setPokemon(result.data);
     }
 
-    getPokemonData(); // aanroepen
+    getPokemonData();
   }, [props.name]);
 
+  // Informatie weergeven
+  // console.log("WELKE DATA HEBBEN WE NOG MEER?", pokemon && pokemon);
   return (
     <div>
       <h1>Pokemon Card</h1>
-      {/* Weergeven met JSX */}
-      {/* Goed oppassen, als we data niet hebben && of ?. gebruiken */}
-      <h1>{pokemon?.name}</h1>
+      <h1>{pokemon && pokemon.name}</h1>
       <img src={pokemon?.sprites.front_default} alt={pokemon?.name} />
+      {pokemon && <PokemonTypes pokemon={pokemon} />}
+      {pokemon &&
+        pokemon.stats.map((stat) => {
+          // console.log("WAT IS STAT", stat);
+          return (
+            <div key={pokemon.name + stat.stat.name}>
+              {stat.stat.name}
+              <progress value={stat.base_stat} max={100} />
+            </div>
+          );
+        })}
     </div>
   );
 }

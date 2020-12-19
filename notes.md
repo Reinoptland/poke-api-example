@@ -86,18 +86,53 @@ Ophalen van 20 pokemon namen ophalen uit api en weergeven,et kaartjes
 
 ## Als een gebruiker wil ik volgende en vorige knoppen hebben zodat ik door de pokemon heen kan bladeren
 
-### Stapen plan
+### Stappen plan
 
-- [] State aan maken voor de huidige "pagina" beginwaarde: 0
-- [] url aanpassen, `offset${pagina * 20}`
-- [] Knopje maken die de pagina verandert met + 1 (volgende)
-- [] Knopje maken die de pagine verandert met -1 (vorige)
+Url: `https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20`
+
+Domein: https://pokeapi.co
+Api Endpoint: /api/v2/pokemon
+QueryString: offset=0&limit=20
+
+- offset: ik wil beginnen bij de eerste pokemon
+- limit: geef me twintig stukken data
+
+- [x] State aan maken voor de huidige "pagina" beginwaarde: 0
+- [x] url aanpassen (template literal), `offset${pagina}`
+- [x] Pagina state aan dependency array van useEffect toegevoegd
+- [x] Knopje maken die de pagina verandert met + 20 (volgende)
+  - [x] Knopje (<button></button>)
+  - [x] onClick (Event listener)
+  - [x] state updaten met + 20 -> setPagina(pagina + 20)
+- [x] Knopje maken die de pagine verandert met -20 (vorige)
+
+## Stappen plan: Loading feedback
+
+- [x] Wanneer is de data nog niet aanwezig? als pokemons === null
+- [x] If statement toevoegen: if(pokemons === null){ return <img /> }
+
+## Stappen plan Error feedback
+
+- [x] State aanmaken voor status van de app
+- [x] De beginwaarde van die status is: 'loading'
+- [x] Is data aanwezig dan is de status: 'done loading'
+- [x] Was er een error dan is status: 'error'
+- [x] Status aanpassen op de juiste plek in de app
+- [x] De gebruiker laten zien wat er is gebeurd
 
 ## Later nog te doen
 
+Vragenlijst
+
+- [x] Stappen plan van vorige keer afwerken
+- [x] Volgende / Vorige button
+- [x] Vorige knop mag je niet kunnen gebruiken als je op pagina 0 bent
+
+- [x] Loading / Error feedback (try / catch)
+- [x] Wat moet je doen met "keys" als je Array.map gebruikt?
+- [x] PokemonCard uitbreiden met moves, abilities enzovoorts
+
 Make it better
 
-- [] try / catch
 - [] mappenstructuur
-- [] Styling
-- [] Maak het mogelijk om een andere pokemon van de api op te halen niet alleen ditto
+- [] Styling -> Per component / importeren?
